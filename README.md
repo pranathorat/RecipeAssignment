@@ -10,16 +10,19 @@ available recipes based on one or more of the following criteria:
 4. Text search within the instructions.
 
 For example, the API should be able to handle the following search requests: 
+
 • All vegetarian recipes 
 • Recipes that can serve 4 persons and have “potatoes” as an ingredient 
 • Recipes without “salmon” as an ingredient that has “oven” in the instructions
 
-#How to build and run:
+# How to build and run:
 
 mvn clean install
 
 Endpoint URL:
 http://localhost:8700
+
+# API Documentation:
 
 a friendly overview and documentation of this REST API will be available at:
 
