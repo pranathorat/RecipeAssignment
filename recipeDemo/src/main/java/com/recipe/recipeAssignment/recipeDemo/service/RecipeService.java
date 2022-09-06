@@ -8,6 +8,10 @@ import com.recipe.recipeAssignment.recipeDemo.entity.RecipeDemo;
 
 import java.util.List;
 
+/**
+ * Service Interface
+ */
+
 public interface RecipeService {
 
     public List<RecipeDto> getAllRecipes() throws RecipeException;

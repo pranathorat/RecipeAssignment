@@ -1,9 +1,7 @@
 package com.recipe.recipeAssignment.recipeDemo.dto;
 
 import com.recipe.recipeAssignment.recipeDemo.entity.RecipeDemo;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
@@ -12,6 +10,9 @@ import javax.validation.constraints.NotNull;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
+@ToString
 public class RecipeDto {
 
     Integer recipeId;
@@ -25,55 +26,11 @@ public class RecipeDto {
     String ingredients;
     String instructions;
 
-
-    public Integer getRecipeId() {
-        return recipeId;
-    }
-
-    public void setRecipeId(Integer recipeId) {
-        this.recipeId = recipeId;
-    }
-
-    public String getRecipeName() {
-        return recipeName;
-    }
-
-    public void setRecipeName(String recipeName) {
-        this.recipeName = recipeName;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public Integer getServeCapacity() {
-        return serveCapacity;
-    }
-
-    public void setServeCapacity(Integer serveCapacity) {
-        this.serveCapacity = serveCapacity;
-    }
-
-    public String getIngredients() {
-        return ingredients;
-    }
-
-    public void setIngredients(String ingredients) {
-        this.ingredients = ingredients;
-    }
-
-    public String getInstructions() {
-        return instructions;
-    }
-
-    public void setInstructions(String instructions) {
-        this.instructions = instructions;
-    }
-
+    /**
+     *  Converts Entity into DTO
+     * @param recipeDemo entity values
+     * @return recipeDTO
+     */
     public static RecipeDto valueOf(RecipeDemo recipeDemo) {
         RecipeDto recipeDTO= new RecipeDto();
         recipeDTO.setRecipeId(recipeDemo.getRecipeId());
@@ -96,19 +53,7 @@ public class RecipeDto {
         recipeDemo.setIngredients(this.getIngredients());
         recipeDemo.setInstructions(this.getInstructions());
 
-
         return recipeDemo;
     }
 
-    @Override
-    public String toString() {
-        return "RecipeDto{" +
-                "recipeId=" + recipeId +
-                ", recipeName='" + recipeName + '\'' +
-                ", category='" + category + '\'' +
-                ", serveCapacity=" + serveCapacity +
-                ", ingredients='" + ingredients + '\'' +
-                ", instructions='" + instructions + '\'' +
-                '}';
-    }
 }

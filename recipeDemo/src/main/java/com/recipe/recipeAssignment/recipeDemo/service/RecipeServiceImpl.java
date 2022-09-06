@@ -15,6 +15,10 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+/**
+ * Service layer Implementation
+ */
+
 @Slf4j
 @RequiredArgsConstructor
 @Service
@@ -26,7 +30,11 @@ public class RecipeServiceImpl implements RecipeService {
         this.recipeRepository = recipeRepository;
     }
 
-    //Get all recipes
+    /**
+     * will Get all recipes using getAllRecipes method
+     * @return {@link List} of {@link RecipeDto}
+     * @throws RecipeException
+     */
     public List<RecipeDto> getAllRecipes() throws RecipeException {
 
         List<RecipeDemo> recipesDemo = recipeRepository.findAll();
@@ -39,7 +47,14 @@ public class RecipeServiceImpl implements RecipeService {
 
         return recipeDTOs;
     }
-    //will get Recipe by RecipeId
+
+    /**
+     * will get Recipe by RecipeId
+     * @param recipeId {@link Integer} Recipe ID
+     * @return {@link RecipeDemo} if recipe is present by Given Recipe ID
+     * @throws RecipeNotFoundException
+     */
+
 
     public RecipeDemo getRecipe(Integer recipeId) throws RecipeNotFoundException {
         RecipeDemo recipeDemo = recipeRepository.findByRecipeId(recipeId);
@@ -52,10 +67,22 @@ public class RecipeServiceImpl implements RecipeService {
             throw new RecipeNotFoundException("Recipe Not Found with Recipe Id:" + recipeId);
         }
     }
+
+    /**
+     * It will create new Recipe
+     * @param recipeDTO
+     * @return {@link RecipeDemo}values
+     */
     public RecipeDemo addRecipe(RecipeDto recipeDTO) {
         RecipeDemo recipeDemo = recipeDTO.createEntity();
         return recipeRepository.save(recipeDemo);
     }
+
+    /**
+     * It will delete recipe By recipe Id
+     * @param recipeId {@link Integer} recipeID
+     * @throws RecipeIdNotExistException
+     */
     public List<RecipeDemo> deleteRecipe(Integer recipeId) throws RecipeIdNotExistException {
         Optional<RecipeDemo> recipe = recipeRepository.findById(recipeId);
         if (recipe != recipeRepository.findById(recipeId)) {
@@ -70,21 +97,48 @@ public class RecipeServiceImpl implements RecipeService {
         return null;
     }
 
+    /**
+     * It will update the recipe
+     * @param recipeDTO
+     * @return {@link RecipeDemo}
+     * @throws RecipeException
+     */
+
     public RecipeDemo updateRecipe(RecipeDto recipeDTO) throws RecipeException {
         RecipeDemo recipe = recipeDTO.createEntity();
         recipe = recipeRepository.save(recipe);
         return recipe;
     }
+
+    /**
+     * It will return recipes by category i.e. recipe is veg or non-veg
+     * @param category
+     * @return {@link List} of {@link RecipeDemo}
+     */
     public List<RecipeDemo> getByCategory(String category) {
         List<RecipeDemo> recipesList = recipeRepository.getByCategory(category);
 
         return recipesList;
     }
+
+    /**
+     * It will return recipes by serving count
+     * @param serveCapacity {@link Integer} serveCapacity
+     * @return {@link List} of {@link RecipeDemo} by serve capacity
+     */
     public List<RecipeDemo> getByServeCapacity(Integer serveCapacity){
         List<RecipeDemo> recipeDemoList = recipeRepository.getByServeCapacity(serveCapacity);
 
         return recipeDemoList;
     }
+
+    /**
+     *It will  find the recipes with serve capacity  and ingredients
+     * @param serveCapacity {@link Integer} serve capacity
+     * @param ingredients {@link String}ingredients
+     * @return {@link List} of {@link RecipeDemo}
+     * @throws RecipeNotFoundException
+     */
         @Override
     public List<RecipeDemo> findAllRecipeByServingCapacityAndIngredient(Integer serveCapacity, String ingredients) throws RecipeNotFoundException {
 
@@ -95,6 +149,16 @@ public class RecipeServiceImpl implements RecipeService {
         }
         return recipesList;
     }
+
+    /**
+     * It will search the recipes by ingredients and instructions
+     * @param includeIngredient {@link boolean}
+     * @param ingredients {@link Integer} ingredients
+     * @param includeInstructions {@link boolean}
+     * @param instructions {@link String} instructions
+     * @return {@link List} of {@link RecipeDemo}
+     * @throws RecipeNotFoundException
+     */
 
     public List<RecipeDemo> findAllRecipeByIngredientAndInstruction(boolean includeIngredient, String ingredients, boolean includeInstructions, String instructions) throws RecipeNotFoundException {
         List<RecipeDemo> recipesList = recipeRepository.findAll().stream().filter(recipeDemo -> {
