@@ -16,8 +16,6 @@ public interface RecipeRepository extends JpaRepository<RecipeDemo,Integer> {
     List<RecipeDemo> getByServeCapacity(Integer serveCapacity);
     RecipeDemo findByRecipeId(Integer recipeId);
 
-
-
     /**
      * Query {@link  RecipeDemo} by serveCapacity and ingredients
      * @param serveCapacity {@link  Integer} serve capacity of recipe

@@ -1,205 +1,237 @@
-2022-09-05 09:02:21.408  INFO 16204 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : Starting RecipeDemoApplication using Java 17.0.4 on PUNITP377691L with PID 16204 (C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo\target\classes started by pranali.thorat01 in C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo)
-2022-09-05 09:02:21.425  INFO 16204 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-09-05 09:02:22.865  INFO 16204 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-09-05 09:02:22.986  INFO 16204 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 1 JPA repository interfaces.
-2022-09-05 09:02:24.094  INFO 16204 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8700 (http)
-2022-09-05 09:02:24.111  INFO 16204 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-09-05 09:02:24.111  INFO 16204 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-09-05 09:02:24.316  INFO 16204 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-09-05 09:02:24.317  INFO 16204 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2800 ms
-2022-09-05 09:02:24.624  INFO 16204 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-09-05 09:02:24.756  INFO 16204 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-09-05 09:02:25.101  INFO 16204 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-09-05 09:02:25.330  INFO 16204 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-09-05 09:02:25.968  INFO 16204 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-09-05 09:02:26.006  INFO 16204 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-09-05 09:02:27.088  INFO 16204 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-09-05 09:02:27.099  INFO 16204 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-09-05 09:02:28.086  WARN 16204 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-09-05 09:02:29.652  INFO 16204 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8700 (http) with context path ''
-2022-09-05 09:02:29.669  INFO 16204 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : Started RecipeDemoApplication in 9.076 seconds (JVM running for 9.98)
-2022-09-05 09:03:11.330  INFO 16204 --- [http-nio-8700-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-09-05 09:03:11.331  INFO 16204 --- [http-nio-8700-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-09-05 09:03:11.333  INFO 16204 --- [http-nio-8700-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-09-05 09:03:11.359  WARN 16204 --- [http-nio-8700-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
-2022-09-05 09:03:18.317  INFO 16204 --- [http-nio-8700-exec-3] c.r.r.r.controller.RecipeController      : Get all recipes
-2022-09-05 09:04:11.350  INFO 16204 --- [http-nio-8700-exec-4] c.r.r.r.controller.RecipeController      : Get all recipes
-2022-09-05 09:04:25.935  INFO 16204 --- [http-nio-8700-exec-5] c.r.r.r.controller.RecipeController      : Get all recipes
-2022-09-05 09:05:55.381  INFO 16204 --- [http-nio-8700-exec-8] c.r.r.r.service.RecipeServiceImpl        : Recipe Found By given Id
-2022-09-05 09:14:00.275  INFO 16204 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-09-05 09:14:00.279  INFO 16204 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-09-05 09:14:00.301  INFO 16204 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-09-05 09:14:12.305  INFO 11864 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : Starting RecipeDemoApplication using Java 17.0.4 on PUNITP377691L with PID 11864 (C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo\target\classes started by pranali.thorat01 in C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo)
-2022-09-05 09:14:12.310  INFO 11864 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-09-05 09:14:13.627  INFO 11864 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-09-05 09:14:13.730  INFO 11864 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 1 JPA repository interfaces.
-2022-09-05 09:14:14.785  INFO 11864 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8700 (http)
-2022-09-05 09:14:14.802  INFO 11864 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-09-05 09:14:14.802  INFO 11864 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-09-05 09:14:14.999  INFO 11864 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-09-05 09:14:15.000  INFO 11864 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2614 ms
-2022-09-05 09:14:15.266  INFO 11864 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-09-05 09:14:15.359  INFO 11864 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-09-05 09:14:15.675  INFO 11864 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-09-05 09:14:15.879  INFO 11864 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-09-05 09:14:16.382  INFO 11864 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-09-05 09:14:16.408  INFO 11864 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-09-05 09:14:17.507  INFO 11864 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-09-05 09:14:17.518  INFO 11864 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-09-05 09:14:18.480  WARN 11864 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-09-05 09:14:19.870  INFO 11864 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8700 (http) with context path ''
-2022-09-05 09:14:19.886  INFO 11864 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : Started RecipeDemoApplication in 8.368 seconds (JVM running for 9.152)
-2022-09-05 09:14:28.310  INFO 11864 --- [http-nio-8700-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-09-05 09:14:28.311  INFO 11864 --- [http-nio-8700-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-09-05 09:14:28.312  INFO 11864 --- [http-nio-8700-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-09-05 09:15:37.652  INFO 11864 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-09-05 09:15:37.656  INFO 11864 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-09-05 09:15:37.679  INFO 11864 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-09-05 09:15:46.572  INFO 26088 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : Starting RecipeDemoApplication using Java 17.0.4 on PUNITP377691L with PID 26088 (C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo\target\classes started by pranali.thorat01 in C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo)
-2022-09-05 09:15:46.576  INFO 26088 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-09-05 09:15:47.857  INFO 26088 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-09-05 09:15:47.975  INFO 26088 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 1 JPA repository interfaces.
-2022-09-05 09:15:49.105  INFO 26088 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8700 (http)
-2022-09-05 09:15:49.121  INFO 26088 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-09-05 09:15:49.122  INFO 26088 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-09-05 09:15:49.314  INFO 26088 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-09-05 09:15:49.315  INFO 26088 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2662 ms
-2022-09-05 09:15:49.581  INFO 26088 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-09-05 09:15:49.685  INFO 26088 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-09-05 09:15:49.991  INFO 26088 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-09-05 09:15:50.186  INFO 26088 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-09-05 09:15:50.686  INFO 26088 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-09-05 09:15:50.722  INFO 26088 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-09-05 09:15:51.747  INFO 26088 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-09-05 09:15:51.760  INFO 26088 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-09-05 09:15:52.758  WARN 26088 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-09-05 09:15:54.249  INFO 26088 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8700 (http) with context path ''
-2022-09-05 09:15:54.263  INFO 26088 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : Started RecipeDemoApplication in 8.497 seconds (JVM running for 9.349)
-2022-09-05 09:16:01.181  INFO 26088 --- [http-nio-8700-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-09-05 09:16:01.182  INFO 26088 --- [http-nio-8700-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-09-05 09:16:01.183  INFO 26088 --- [http-nio-8700-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-09-05 09:16:32.830  INFO 26088 --- [http-nio-8700-exec-3] c.r.r.r.service.RecipeServiceImpl        : Recipe Found By given Id
-2022-09-05 09:17:58.922  INFO 26088 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-09-05 09:17:58.926  INFO 26088 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-09-05 09:17:58.946  INFO 26088 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-09-05 09:18:09.676  INFO 17420 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : Starting RecipeDemoApplication using Java 17.0.4 on PUNITP377691L with PID 17420 (C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo\target\classes started by pranali.thorat01 in C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo)
-2022-09-05 09:18:09.681  INFO 17420 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-09-05 09:18:10.974  INFO 17420 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-09-05 09:18:11.084  INFO 17420 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 1 JPA repository interfaces.
-2022-09-05 09:18:12.167  INFO 17420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8700 (http)
-2022-09-05 09:18:12.182  INFO 17420 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-09-05 09:18:12.182  INFO 17420 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-09-05 09:18:12.374  INFO 17420 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-09-05 09:18:12.375  INFO 17420 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2621 ms
-2022-09-05 09:18:12.649  INFO 17420 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-09-05 09:18:12.740  INFO 17420 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-09-05 09:18:13.087  INFO 17420 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-09-05 09:18:13.277  INFO 17420 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-09-05 09:18:13.803  INFO 17420 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-09-05 09:18:13.836  INFO 17420 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-09-05 09:18:14.871  INFO 17420 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-09-05 09:18:14.883  INFO 17420 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-09-05 09:18:15.878  WARN 17420 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-09-05 09:18:17.451  INFO 17420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8700 (http) with context path ''
-2022-09-05 09:18:17.464  INFO 17420 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : Started RecipeDemoApplication in 8.566 seconds (JVM running for 9.352)
-2022-09-05 09:18:34.293  INFO 17420 --- [http-nio-8700-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-09-05 09:18:34.293  INFO 17420 --- [http-nio-8700-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-09-05 09:18:34.295  INFO 17420 --- [http-nio-8700-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-09-05 09:21:37.690  INFO 17420 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-09-05 09:21:37.693  INFO 17420 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-09-05 09:21:37.714  INFO 17420 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-09-05 09:21:46.431  INFO 15264 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : Starting RecipeDemoApplication using Java 17.0.4 on PUNITP377691L with PID 15264 (C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo\target\classes started by pranali.thorat01 in C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo)
-2022-09-05 09:21:46.435  INFO 15264 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-09-05 09:21:47.760  INFO 15264 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-09-05 09:21:47.862  INFO 15264 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 1 JPA repository interfaces.
-2022-09-05 09:21:49.086  INFO 15264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8700 (http)
-2022-09-05 09:21:49.110  INFO 15264 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-09-05 09:21:49.111  INFO 15264 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-09-05 09:21:49.343  INFO 15264 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-09-05 09:21:49.344  INFO 15264 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2830 ms
-2022-09-05 09:21:49.614  INFO 15264 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-09-05 09:21:49.713  INFO 15264 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-09-05 09:21:49.987  INFO 15264 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-09-05 09:21:50.193  INFO 15264 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-09-05 09:21:50.694  INFO 15264 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-09-05 09:21:50.725  INFO 15264 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-09-05 09:21:51.800  INFO 15264 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-09-05 09:21:51.813  INFO 15264 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-09-05 09:21:52.811  WARN 15264 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-09-05 09:21:54.220  INFO 15264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8700 (http) with context path ''
-2022-09-05 09:21:54.235  INFO 15264 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : Started RecipeDemoApplication in 8.621 seconds (JVM running for 9.44)
-2022-09-05 09:22:00.936  INFO 15264 --- [http-nio-8700-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-09-05 09:22:00.937  INFO 15264 --- [http-nio-8700-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-09-05 09:22:00.938  INFO 15264 --- [http-nio-8700-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-09-05 09:32:55.104  INFO 15264 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-09-05 09:32:55.106  INFO 15264 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-09-05 09:32:55.125  INFO 15264 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-09-05 09:33:06.726  INFO 3480 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : Starting RecipeDemoApplication using Java 17.0.4 on PUNITP377691L with PID 3480 (C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo\target\classes started by pranali.thorat01 in C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo)
-2022-09-05 09:33:06.732  INFO 3480 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-09-05 09:33:08.025  INFO 3480 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-09-05 09:33:08.137  INFO 3480 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 1 JPA repository interfaces.
-2022-09-05 09:33:09.201  INFO 3480 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8700 (http)
-2022-09-05 09:33:09.219  INFO 3480 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-09-05 09:33:09.219  INFO 3480 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-09-05 09:33:09.419  INFO 3480 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-09-05 09:33:09.420  INFO 3480 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2607 ms
-2022-09-05 09:33:09.681  INFO 3480 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-09-05 09:33:09.778  INFO 3480 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-09-05 09:33:10.071  INFO 3480 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-09-05 09:33:10.251  INFO 3480 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-09-05 09:33:10.790  INFO 3480 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-09-05 09:33:10.823  INFO 3480 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-09-05 09:33:11.926  INFO 3480 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-09-05 09:33:11.940  INFO 3480 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-09-05 09:33:12.943  WARN 3480 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-09-05 09:33:14.448  INFO 3480 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8700 (http) with context path ''
-2022-09-05 09:33:14.464  INFO 3480 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : Started RecipeDemoApplication in 8.544 seconds (JVM running for 9.393)
-2022-09-05 09:33:43.894  INFO 3480 --- [http-nio-8700-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-09-05 09:33:43.894  INFO 3480 --- [http-nio-8700-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-09-05 09:33:43.896  INFO 3480 --- [http-nio-8700-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-09-05 09:34:52.465  INFO 3480 --- [http-nio-8700-exec-5] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 514 ms
-2022-09-05 09:40:45.621  INFO 3480 --- [http-nio-8700-exec-9] c.r.r.r.service.RecipeServiceImpl        : Recipe ID Deleted
-2022-09-05 09:42:55.186  INFO 3480 --- [http-nio-8700-exec-2] c.r.r.r.controller.RecipeController      : Recipe Added SuccessFully
-2022-09-05 09:52:26.391  INFO 3480 --- [http-nio-8700-exec-5] c.r.r.r.controller.RecipeController      : Get all recipes
-2022-09-05 09:53:15.472  INFO 3480 --- [http-nio-8700-exec-6] c.r.r.r.service.RecipeServiceImpl        : Recipe Found By given Id
-2022-09-05 09:53:15.487  INFO 3480 --- [http-nio-8700-exec-6] c.r.r.r.controller.RecipeController      : Update recipe
-2022-09-05 09:53:32.833  INFO 3480 --- [http-nio-8700-exec-7] c.r.r.r.service.RecipeServiceImpl        : Recipe Found By given Id
-2022-09-05 09:55:06.900  INFO 3480 --- [http-nio-8700-exec-9] c.r.r.r.service.RecipeServiceImpl        : Recipe Found By given Id
-2022-09-05 09:55:06.924  INFO 3480 --- [http-nio-8700-exec-9] c.r.r.r.controller.RecipeController      : Update recipe
-2022-09-05 09:55:44.827  INFO 3480 --- [http-nio-8700-exec-10] c.r.r.r.service.RecipeServiceImpl        : Recipe Found By given Id
-2022-09-05 09:56:08.823  INFO 3480 --- [http-nio-8700-exec-2] c.r.r.r.controller.RecipeController      : Get all recipes
-2022-09-05 09:56:40.228  INFO 3480 --- [http-nio-8700-exec-3] c.r.r.r.service.RecipeServiceImpl        : Recipe ID Deleted
-2022-09-05 10:28:14.973  INFO 3480 --- [http-nio-8700-exec-7] c.r.r.r.service.RecipeServiceImpl        : Recipe Found By given Id
-2022-09-05 10:28:14.995  INFO 3480 --- [http-nio-8700-exec-7] c.r.r.r.controller.RecipeController      : Update recipe
-2022-09-05 10:28:51.006  INFO 3480 --- [http-nio-8700-exec-8] c.r.r.r.service.RecipeServiceImpl        : Recipe Found By given Id
-2022-09-05 10:29:54.697  INFO 3480 --- [http-nio-8700-exec-1] c.r.r.r.service.RecipeServiceImpl        : Recipe ID Deleted
-2022-09-05 10:30:16.745  INFO 3480 --- [http-nio-8700-exec-2] c.r.r.r.service.RecipeServiceImpl        : Recipe Found By given Id
-2022-09-05 10:31:17.966  WARN 3480 --- [http-nio-8700-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported]
-2022-09-05 10:31:24.337  INFO 3480 --- [http-nio-8700-exec-6] c.r.r.r.service.RecipeServiceImpl        : Recipe Found By given Id
-2022-09-05 10:31:24.352  INFO 3480 --- [http-nio-8700-exec-6] c.r.r.r.controller.RecipeController      : Update recipe
-2022-09-05 10:47:10.035  INFO 3480 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-09-05 10:47:10.047  INFO 3480 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-09-05 10:47:10.069  INFO 3480 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-09-05 12:06:14.218  INFO 20468 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : Starting RecipeDemoApplication using Java 17.0.4 on PUNITP377691L with PID 20468 (C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo\target\classes started by pranali.thorat01 in C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo)
-2022-09-05 12:06:14.229  INFO 20468 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-09-05 12:06:16.377  INFO 20468 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-09-05 12:06:16.493  INFO 20468 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 1 JPA repository interfaces.
-2022-09-05 12:06:18.459  INFO 20468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8700 (http)
-2022-09-05 12:06:18.497  INFO 20468 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-09-05 12:06:18.497  INFO 20468 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-09-05 12:06:18.854  INFO 20468 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-09-05 12:06:18.854  INFO 20468 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4460 ms
-2022-09-05 12:06:19.415  INFO 20468 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-09-05 12:06:19.586  INFO 20468 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-09-05 12:06:20.070  INFO 20468 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-09-05 12:06:20.497  INFO 20468 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-09-05 12:06:21.668  INFO 20468 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-09-05 12:06:21.731  INFO 20468 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-09-05 12:06:23.630  INFO 20468 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-09-05 12:06:23.646  INFO 20468 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-09-05 12:06:25.400  WARN 20468 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-09-05 12:06:27.929  INFO 20468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8700 (http) with context path ''
-2022-09-05 12:06:27.945  INFO 20468 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : Started RecipeDemoApplication in 15.083 seconds (JVM running for 16.595)
-2022-09-05 12:06:32.842  INFO 20468 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-09-05 12:06:32.842  INFO 20468 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-09-05 12:06:32.889  INFO 20468 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-08 00:30:42.142  INFO 33576 --- [main] c.r.r.r.C.RecipeControllerTests          : Starting RecipeControllerTests using Java 17.0.4 on PUNITP377691L with PID 33576 (started by pranali.thorat01 in C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo)
+2022-09-08 00:30:42.166  INFO 33576 --- [main] c.r.r.r.C.RecipeControllerTests          : No active profile set, falling back to 1 default profile: "default"
+2022-09-08 00:30:47.720  INFO 33576 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-09-08 00:30:47.720  INFO 33576 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-09-08 00:30:47.720  INFO 33576 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2022-09-08 00:30:47.829  INFO 33576 --- [main] c.r.r.r.C.RecipeControllerTests          : Started RecipeControllerTests in 6.856 seconds (JVM running for 11.565)
+2022-09-08 00:30:48.062  WARN 33576 --- [main] o.s.test.context.TestContextManager      : Caught exception while invoking 'afterTestMethod' callback on TestExecutionListener [org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7cbd9d24] for test method [void com.recipe.recipeAssignment.recipeDemo.UnitTesting.RecipeControllerTests.shouldFetchOneRecipeById() throws java.lang.Exception] and test instance [com.recipe.recipeAssignment.recipeDemo.UnitTesting.RecipeControllerTests@5350ab17]
+
+org.mockito.exceptions.misusing.UnfinishedStubbingException: 
+Unfinished stubbing detected here:
+-> at com.recipe.recipeAssignment.recipeDemo.UnitTesting.RecipeControllerTests.shouldFetchOneRecipeById(RecipeControllerTests.java:66)
+
+E.g. thenReturn() may be missing.
+Examples of correct stubbing:
+    when(mock.isOk()).thenReturn(true);
+    when(mock.isOk()).thenThrow(exception);
+    doThrow(exception).when(mock).someVoidMethod();
+Hints:
+ 1. missing thenReturn()
+ 2. you are trying to stub a final method, which is not supported
+ 3. you are stubbing the behaviour of another mock inside before 'thenReturn' instruction is completed
+
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:83) ~[spring-boot-test-2.7.2.jar:2.7.2]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:70) ~[spring-boot-test-2.7.2.jar:2.7.2]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.afterTestMethod(ResetMocksTestExecutionListener.java:64) ~[spring-boot-test-2.7.2.jar:2.7.2]
+	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:445) ~[spring-test-5.3.22.jar:5.3.22]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.afterEach(SpringExtension.java:206) ~[spring-test-5.3.22.jar:5.3.22]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:257) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:273) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:273) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:272) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:256) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:141) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) ~[junit5-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+
+2022-09-08 01:21:29.494  INFO 900 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : Starting RecipeDemoApplication using Java 17.0.4 on PUNITP377691L with PID 900 (C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo\target\classes started by pranali.thorat01 in C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo)
+2022-09-08 01:21:29.502  INFO 900 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-09-08 01:21:31.065  INFO 900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-08 01:21:31.170  INFO 900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 1 JPA repository interfaces.
+2022-09-08 01:21:32.437  INFO 900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8700 (http)
+2022-09-08 01:21:32.472  INFO 900 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-08 01:21:32.472  INFO 900 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 01:21:32.703  INFO 900 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-08 01:21:32.703  INFO 900 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3117 ms
+2022-09-08 01:21:32.988  INFO 900 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-08 01:21:33.085  INFO 900 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-08 01:21:33.403  INFO 900 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-08 01:21:33.629  INFO 900 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-08 01:21:34.268  INFO 900 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-08 01:21:34.300  INFO 900 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-09-08 01:21:35.569  INFO 900 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-08 01:21:35.600  INFO 900 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-08 01:21:36.739  WARN 900 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-08 01:21:38.368  INFO 900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8700 (http) with context path ''
+2022-09-08 01:21:38.383  INFO 900 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : Started RecipeDemoApplication in 9.775 seconds (JVM running for 10.744)
+2022-09-08 01:23:15.182  INFO 900 --- [http-nio-8700-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-08 01:23:15.182  INFO 900 --- [http-nio-8700-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-08 01:23:15.182  INFO 900 --- [http-nio-8700-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-09-08 01:23:15.566  INFO 900 --- [http-nio-8700-exec-2] c.r.r.r.controller.RecipeController      : Recipe Added SuccessFully
+2022-09-08 01:23:28.289  INFO 900 --- [http-nio-8700-exec-3] c.r.r.r.controller.RecipeController      : Recipe Added SuccessFully
+2022-09-08 01:23:38.267  INFO 900 --- [http-nio-8700-exec-4] c.r.r.r.controller.RecipeController      : Recipe Added SuccessFully
+2022-09-08 01:24:01.016  INFO 900 --- [http-nio-8700-exec-5] c.r.r.r.controller.RecipeController      : Recipe Added SuccessFully
+2022-09-08 01:24:35.753  INFO 900 --- [http-nio-8700-exec-6] c.r.r.r.controller.RecipeController      : Get all recipes
+2022-09-08 01:27:19.875  INFO 900 --- [http-nio-8700-exec-4] c.r.r.r.controller.RecipeController      : Recipe Added SuccessFully
+2022-09-08 01:27:43.028 ERROR 900 --- [http-nio-8700-exec-6] c.r.r.r.service.RecipeServiceImpl        : Recipe ID Doesn't Exist
+2022-09-08 01:27:51.021  INFO 900 --- [http-nio-8700-exec-7] c.r.r.r.service.RecipeServiceImpl        : Recipe ID Deleted
+2022-09-08 01:27:56.392 ERROR 900 --- [http-nio-8700-exec-9] c.r.r.r.service.RecipeServiceImpl        : Recipe ID Doesn't Exist
+2022-09-08 01:28:36.170  INFO 900 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-08 01:28:36.170  INFO 900 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-08 01:28:36.201  INFO 900 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-08 09:45:36.065  INFO 26104 --- [main] c.r.r.r.UnitTesting.RecipeUnitTesting    : Starting RecipeUnitTesting using Java 17.0.4 on PUNITP377691L with PID 26104 (started by pranali.thorat01 in C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo)
+2022-09-08 09:45:36.070  INFO 26104 --- [main] c.r.r.r.UnitTesting.RecipeUnitTesting    : No active profile set, falling back to 1 default profile: "default"
+2022-09-08 09:45:39.347  INFO 26104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-08 09:45:39.577  INFO 26104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 201 ms. Found 1 JPA repository interfaces.
+2022-09-08 09:45:41.971  INFO 26104 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-09-08 09:45:42.019  INFO 26104 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-08 09:45:42.022  INFO 26104 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 09:45:42.395  INFO 26104 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-08 09:45:42.396  INFO 26104 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5594 ms
+2022-09-08 09:45:43.235  INFO 26104 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-08 09:45:43.531  INFO 26104 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-08 09:45:44.098  INFO 26104 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-08 09:45:44.450  INFO 26104 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-08 09:45:45.592  INFO 26104 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-08 09:45:45.648  INFO 26104 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-09-08 09:45:47.608  INFO 26104 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-08 09:45:47.629  INFO 26104 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-08 09:45:49.759  WARN 26104 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-08 09:45:54.091  INFO 26104 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 50328 (http) with context path ''
+2022-09-08 09:45:54.130  INFO 26104 --- [main] c.r.r.r.UnitTesting.RecipeUnitTesting    : Started RecipeUnitTesting in 19.132 seconds (JVM running for 22.079)
+2022-09-08 09:45:57.345  INFO 26104 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-08 09:45:57.346  INFO 26104 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-08 09:45:57.347  INFO 26104 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-09-08 09:45:57.512  INFO 26104 --- [http-nio-auto-1-exec-1] c.r.r.r.controller.RecipeController      : Get all recipes
+2022-09-08 09:45:57.851  INFO 26104 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-08 09:45:57.856  INFO 26104 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-08 09:45:57.885  INFO 26104 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-08 09:47:54.301  INFO 19516 --- [main] c.r.r.r.UnitTesting.RecipeUnitTesting    : Starting RecipeUnitTesting using Java 17.0.4 on PUNITP377691L with PID 19516 (started by pranali.thorat01 in C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo)
+2022-09-08 09:47:54.305  INFO 19516 --- [main] c.r.r.r.UnitTesting.RecipeUnitTesting    : No active profile set, falling back to 1 default profile: "default"
+2022-09-08 09:47:57.302  INFO 19516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-08 09:47:57.428  INFO 19516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110 ms. Found 1 JPA repository interfaces.
+2022-09-08 09:47:59.657  INFO 19516 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-09-08 09:47:59.688  INFO 19516 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-08 09:47:59.690  INFO 19516 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 09:48:00.128  INFO 19516 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-08 09:48:00.130  INFO 19516 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5172 ms
+2022-09-08 09:48:01.046  INFO 19516 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-08 09:48:01.271  INFO 19516 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-08 09:48:01.778  INFO 19516 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-08 09:48:02.181  INFO 19516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-08 09:48:03.034  INFO 19516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-08 09:48:03.074  INFO 19516 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-09-08 09:48:04.929  INFO 19516 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-08 09:48:04.957  INFO 19516 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-08 09:48:07.012  WARN 19516 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-08 09:48:11.018  INFO 19516 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 50363 (http) with context path ''
+2022-09-08 09:48:11.049  INFO 19516 --- [main] c.r.r.r.UnitTesting.RecipeUnitTesting    : Started RecipeUnitTesting in 17.58 seconds (JVM running for 20.633)
+2022-09-08 09:48:14.089  INFO 19516 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-08 09:48:14.091  INFO 19516 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-08 09:48:14.094  INFO 19516 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-09-08 09:48:14.277  INFO 19516 --- [http-nio-auto-1-exec-1] c.r.r.r.service.RecipeServiceImpl        : Recipe Found By given Id
+2022-09-08 09:48:16.585  INFO 19516 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-08 09:48:16.592  INFO 19516 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-08 09:48:16.643  INFO 19516 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-08 09:51:36.735  INFO 6868 --- [main] c.r.r.r.C.RecipeControllerTests          : Starting RecipeControllerTests using Java 17.0.4 on PUNITP377691L with PID 6868 (started by pranali.thorat01 in C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo)
+2022-09-08 09:51:36.740  INFO 6868 --- [main] c.r.r.r.C.RecipeControllerTests          : No active profile set, falling back to 1 default profile: "default"
+2022-09-08 09:51:42.782  INFO 6868 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-09-08 09:51:42.783  INFO 6868 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-09-08 09:51:42.786  INFO 6868 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2022-09-08 09:51:42.853  INFO 6868 --- [main] c.r.r.r.C.RecipeControllerTests          : Started RecipeControllerTests in 7.292 seconds (JVM running for 12.018)
+2022-09-08 09:51:43.338  INFO 6868 --- [main] c.r.r.r.controller.RecipeController      : Recipe Added SuccessFully
+2022-09-08 09:52:50.183  INFO 21560 --- [main] c.r.r.r.C.RecipeControllerTests          : Starting RecipeControllerTests using Java 17.0.4 on PUNITP377691L with PID 21560 (started by pranali.thorat01 in C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo)
+2022-09-08 09:52:50.187  INFO 21560 --- [main] c.r.r.r.C.RecipeControllerTests          : No active profile set, falling back to 1 default profile: "default"
+2022-09-08 09:52:56.206  INFO 21560 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-09-08 09:52:56.208  INFO 21560 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-09-08 09:52:56.213  INFO 21560 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2022-09-08 09:52:56.309  INFO 21560 --- [main] c.r.r.r.C.RecipeControllerTests          : Started RecipeControllerTests in 7.259 seconds (JVM running for 12.023)
+2022-09-08 09:52:56.868  INFO 21560 --- [main] c.r.r.r.controller.RecipeController      : Recipe Added SuccessFully
+2022-09-08 09:54:16.239  INFO 29412 --- [main] c.r.r.r.C.RecipeControllerTests          : Starting RecipeControllerTests using Java 17.0.4 on PUNITP377691L with PID 29412 (started by pranali.thorat01 in C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo)
+2022-09-08 09:54:16.243  INFO 29412 --- [main] c.r.r.r.C.RecipeControllerTests          : No active profile set, falling back to 1 default profile: "default"
+2022-09-08 09:54:22.524  INFO 29412 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-09-08 09:54:22.526  INFO 29412 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-09-08 09:54:22.531  INFO 29412 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2022-09-08 09:54:22.624  INFO 29412 --- [main] c.r.r.r.C.RecipeControllerTests          : Started RecipeControllerTests in 7.593 seconds (JVM running for 12.571)
+2022-09-08 09:54:23.133  INFO 29412 --- [main] c.r.r.r.controller.RecipeController      : Update recipe
+2022-09-08 09:54:51.503  INFO 25008 --- [main] c.r.r.r.C.RecipeControllerTests          : Starting RecipeControllerTests using Java 17.0.4 on PUNITP377691L with PID 25008 (started by pranali.thorat01 in C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo)
+2022-09-08 09:54:51.507  INFO 25008 --- [main] c.r.r.r.C.RecipeControllerTests          : No active profile set, falling back to 1 default profile: "default"
+2022-09-08 09:54:57.742  INFO 25008 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-09-08 09:54:57.744  INFO 25008 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-09-08 09:54:57.747  INFO 25008 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2022-09-08 09:54:57.820  INFO 25008 --- [main] c.r.r.r.C.RecipeControllerTests          : Started RecipeControllerTests in 7.645 seconds (JVM running for 12.347)
+2022-09-08 09:57:19.009  INFO 32640 --- [main] c.r.r.r.C.RecipeControllerTests          : Starting RecipeControllerTests using Java 17.0.4 on PUNITP377691L with PID 32640 (started by pranali.thorat01 in C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo)
+2022-09-08 09:57:19.013  INFO 32640 --- [main] c.r.r.r.C.RecipeControllerTests          : No active profile set, falling back to 1 default profile: "default"
+2022-09-08 09:57:24.836  INFO 32640 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-09-08 09:57:24.838  INFO 32640 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-09-08 09:57:24.842  INFO 32640 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2022-09-08 09:57:24.938  INFO 32640 --- [main] c.r.r.r.C.RecipeControllerTests          : Started RecipeControllerTests in 7.039 seconds (JVM running for 11.834)
+2022-09-08 10:00:09.014  INFO 29592 --- [main] c.r.r.r.U.RecipeControllerTests          : Starting RecipeControllerTests using Java 17.0.4 on PUNITP377691L with PID 29592 (started by pranali.thorat01 in C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo)
+2022-09-08 10:00:09.021  INFO 29592 --- [main] c.r.r.r.U.RecipeControllerTests          : No active profile set, falling back to 1 default profile: "default"
+2022-09-08 10:00:15.556  INFO 29592 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-09-08 10:00:15.558  INFO 29592 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-09-08 10:00:15.561  INFO 29592 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2022-09-08 10:00:15.629  INFO 29592 --- [main] c.r.r.r.U.RecipeControllerTests          : Started RecipeControllerTests in 7.782 seconds (JVM running for 12.489)
+2022-09-08 10:00:16.055  INFO 29592 --- [main] c.r.r.r.controller.RecipeController      : Get all recipes
+2022-09-08 10:00:16.214  INFO 29592 --- [main] c.r.r.r.controller.RecipeController      : Recipe Added SuccessFully
+2022-09-08 10:00:16.232  INFO 29592 --- [main] c.r.r.r.controller.RecipeController      : Update recipe
+2022-09-08 10:36:59.070  INFO 8668 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : Starting RecipeDemoApplication using Java 17.0.4 on PUNITP377691L with PID 8668 (C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo\target\classes started by pranali.thorat01 in C:\Users\pranali.thorat01\Downloads\recipeDemo\recipeDemo)
+2022-09-08 10:36:59.076  INFO 8668 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-09-08 10:37:00.589  INFO 8668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-08 10:37:00.711  INFO 8668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 1 JPA repository interfaces.
+2022-09-08 10:37:02.001  INFO 8668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8700 (http)
+2022-09-08 10:37:02.025  INFO 8668 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-08 10:37:02.026  INFO 8668 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 10:37:02.271  INFO 8668 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-08 10:37:02.272  INFO 8668 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3092 ms
+2022-09-08 10:37:02.589  INFO 8668 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-08 10:37:02.709  INFO 8668 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-08 10:37:03.091  INFO 8668 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-08 10:37:03.332  INFO 8668 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-08 10:37:03.932  INFO 8668 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-08 10:37:03.967  INFO 8668 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-09-08 10:37:05.321  INFO 8668 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-08 10:37:05.336  INFO 8668 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-08 10:37:06.535  WARN 8668 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-08 10:37:08.318  INFO 8668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8700 (http) with context path ''
+2022-09-08 10:37:08.335  INFO 8668 --- [main] c.r.r.recipeDemo.RecipeDemoApplication   : Started RecipeDemoApplication in 10.196 seconds (JVM running for 11.092)
+2022-09-08 10:37:40.310  INFO 8668 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-08 10:37:40.315  INFO 8668 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-08 10:37:40.346  INFO 8668 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

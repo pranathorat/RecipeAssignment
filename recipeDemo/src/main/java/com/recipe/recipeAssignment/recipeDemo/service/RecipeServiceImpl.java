@@ -1,8 +1,8 @@
 package com.recipe.recipeAssignment.recipeDemo.service;
 
-import com.recipe.recipeAssignment.recipeDemo.ExceptionHandler.RecipeException;
-import com.recipe.recipeAssignment.recipeDemo.ExceptionHandler.RecipeIdNotExistException;
-import com.recipe.recipeAssignment.recipeDemo.ExceptionHandler.RecipeNotFoundException;
+import com.recipe.recipeAssignment.recipeDemo.exceptionHandler.RecipeException;
+import com.recipe.recipeAssignment.recipeDemo.exceptionHandler.RecipeIdNotExistException;
+import com.recipe.recipeAssignment.recipeDemo.exceptionHandler.RecipeNotFoundException;
 import com.recipe.recipeAssignment.recipeDemo.dto.RecipeDto;
 import com.recipe.recipeAssignment.recipeDemo.entity.RecipeDemo;
 import com.recipe.recipeAssignment.recipeDemo.repository.RecipeRepository;
@@ -54,8 +54,6 @@ public class RecipeServiceImpl implements RecipeService {
      * @return {@link RecipeDemo} if recipe is present by Given Recipe ID
      * @throws RecipeNotFoundException
      */
-
-
     public RecipeDemo getRecipe(Integer recipeId) throws RecipeNotFoundException {
         RecipeDemo recipeDemo = recipeRepository.findByRecipeId(recipeId);
 
@@ -67,14 +65,13 @@ public class RecipeServiceImpl implements RecipeService {
             throw new RecipeNotFoundException("Recipe Not Found with Recipe Id:" + recipeId);
         }
     }
-
     /**
      * It will create new Recipe
-     * @param recipeDTO
+     * @param
      * @return {@link RecipeDemo}values
      */
-    public RecipeDemo addRecipe(RecipeDto recipeDTO) {
-        RecipeDemo recipeDemo = recipeDTO.createEntity();
+
+    public RecipeDemo addRecipe(RecipeDemo recipeDemo){
         return recipeRepository.save(recipeDemo);
     }
 

@@ -1,7 +1,7 @@
 package com.recipe.recipeAssignment.recipeDemo.controller;
 
-import com.recipe.recipeAssignment.recipeDemo.ExceptionHandler.RecipeIdNotExistException;
-import com.recipe.recipeAssignment.recipeDemo.ExceptionHandler.RecipeNotFoundException;
+import com.recipe.recipeAssignment.recipeDemo.exceptionHandler.RecipeIdNotExistException;
+import com.recipe.recipeAssignment.recipeDemo.exceptionHandler.RecipeNotFoundException;
 import com.recipe.recipeAssignment.recipeDemo.dto.RecipeDto;
 import com.recipe.recipeAssignment.recipeDemo.entity.RecipeDemo;
 import com.recipe.recipeAssignment.recipeDemo.service.RecipeServiceImpl;
@@ -71,6 +71,7 @@ public class RecipeController {
             @ApiResponse(responseCode = "404",description = "Recipe not found By Id",content = @Content)
     })
 
+    @ResponseStatus(HttpStatus.OK)
     @GetMapping(value = "/recipe/{recipeId}")
 
     public ResponseEntity<RecipeDemo>getRecipe(@PathVariable Integer recipeId)throws RecipeNotFoundException{
@@ -91,15 +92,14 @@ public class RecipeController {
             @ApiResponse(responseCode = "404",description = "Recipe Not Added",content = @Content)
     })
 
-    @PostMapping(value = "/recipes")
-   public ResponseEntity<String> addRecipe(@RequestBody @Valid RecipeDto recipe) throws Exception {
-        RecipeDemo recipeId = recipeService.addRecipe(recipe);
-        String successMessage = environment.getProperty("API.INSERT_SUCCESS");//+ recipeId;
-        log.info("Recipe Added SuccessFully");
-        return new ResponseEntity<>(successMessage, HttpStatus.CREATED);
-    }
 
-    //Delete Recipe By RecipeID
+    @ResponseStatus( HttpStatus.CREATED )
+    @PostMapping(value = "/recipes")
+    public RecipeDemo addRecipe(@Valid @RequestBody RecipeDemo recipe) {
+        RecipeDemo recipeDemo= recipeService.addRecipe(recipe);
+        log.info("Recipe Added SuccessFully");
+        return recipeDemo;
+    }
 
     /**
      * Recipes will be deleted by Recipe Id
@@ -113,16 +113,14 @@ public class RecipeController {
                     content={@Content(mediaType = "application/json",schema = @Schema(implementation = RecipeDto.class))}),
             @ApiResponse(responseCode = "404",description = "Recipe Id Not available For Delete Operation",content = @Content)
     })
-    //recipe will delete By recipe Id
+
     @DeleteMapping(value = "/recipes/{recipeId}")
     public ResponseEntity<String> deleteRecipe(@PathVariable Integer recipeId) throws RecipeIdNotExistException {
 
         recipeService.deleteRecipe(recipeId);
-       // log.info("Recipe Deleted");
         String successMessage = environment.getProperty("API.DELETE_SUCCESS");
         return new ResponseEntity<>(successMessage, HttpStatus.OK);
     }
-
 
     /**
      * recipe will get updated using recipe id
@@ -148,7 +146,6 @@ public class RecipeController {
         log.info("Update recipe");
         return new ResponseEntity<>(successMessage, HttpStatus.OK);
     }
-
     /**
      * Fetches recipes By Category i.e Veg or non-veg
      * @param category {@link String}
@@ -167,7 +164,6 @@ public class RecipeController {
     public ResponseEntity<List<RecipeDemo>>getByCategory(@PathVariable String category) throws Exception {
         return new ResponseEntity<List<RecipeDemo>>(recipeService.getByCategory(category), HttpStatus.OK);
     }
-
     /**
      * Fetches Recipe By serving capacity count
      * @param serveCapacity {@link Integer}

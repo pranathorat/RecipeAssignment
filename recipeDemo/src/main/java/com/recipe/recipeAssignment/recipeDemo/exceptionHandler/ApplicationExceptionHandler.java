@@ -1,4 +1,4 @@
-package com.recipe.recipeAssignment.recipeDemo.ExceptionHandler;
+package com.recipe.recipeAssignment.recipeDemo.exceptionHandler;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;

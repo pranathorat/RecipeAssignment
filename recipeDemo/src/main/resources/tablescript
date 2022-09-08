@@ -1,0 +1,8 @@
+create schema recipedb;
+use recipedb;
+drop table recipedemo;
+
+create table recipedemo(recipeid int auto_increment primary key, recipename varchar(50),
+servecapacity int,category varchar(100), ingredients varchar(500), instructions varchar(1000));
+
+select * from recipedemo;

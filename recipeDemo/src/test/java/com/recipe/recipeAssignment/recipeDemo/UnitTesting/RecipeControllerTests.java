@@ -1,4 +1,4 @@
-package com.recipe.recipeAssignment.recipeDemo.ControllerTest;
+package com.recipe.recipeAssignment.recipeDemo.UnitTesting;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -6,38 +6,21 @@ import com.recipe.recipeAssignment.recipeDemo.controller.RecipeController;
 import com.recipe.recipeAssignment.recipeDemo.dto.RecipeDto;
 import com.recipe.recipeAssignment.recipeDemo.entity.RecipeDemo;
 import com.recipe.recipeAssignment.recipeDemo.repository.RecipeRepository;
-import com.recipe.recipeAssignment.recipeDemo.service.RecipeService;
 import com.recipe.recipeAssignment.recipeDemo.service.RecipeServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
-
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
-
-import static org.hamcrest.Matchers.hasSize;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.Mockito.doNothing;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-import org.mockito.ArgumentMatchers;
-import org.springframework.test.web.servlet.MvcResult;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-
 import static org.hamcrest.CoreMatchers.is;
 
 @WebMvcTest(controllers = RecipeController.class)
@@ -90,20 +73,20 @@ public class RecipeControllerTests {
 
     @Test
     void shouldCreateNewRecipe() throws Exception {
-        given(recipeService.addRecipe(new RecipeDto())).willAnswer((invocation) -> invocation.getArgument(0));
+        given(recipeService.addRecipe(new RecipeDemo())).willAnswer((invocation) -> invocation.getArgument(0));
 
-        RecipeDto recipedto = new RecipeDto(null, "Cake", "veg", 2, "Chocolate", "Oven");
+        RecipeDemo recipedemo = new RecipeDemo(null, "Cake", "veg", 2, "Chocolate", "Oven");
 
         this.mockMvc.perform(post("/recipes")
                         .contentType(MediaType.APPLICATION_JSON_VALUE)
-                        .content(objectMapper.writeValueAsString(recipedto)))
+                        .content(objectMapper.writeValueAsString(recipedemo)))
                 .andExpect(status().isCreated());
     }
 
     @Test
-    void shouldUpdateUser() throws Exception {
+    void shouldUpdateRecipe() throws Exception {
         Integer recipeId = 2;
-        final RecipeDto recipe = new RecipeDto(2, "Pulav", "veg", 1, "carrot", "cook");
+        final RecipeDto recipe = new RecipeDto(2, "Pulav", "veg", 1, "carrot", "make");
         given(recipeService.getRecipe(recipeId)).willReturn((recipe.createEntity()));
         given(recipeService.updateRecipe(recipe)).willAnswer((invocation) -> invocation.getArgument(0));
 

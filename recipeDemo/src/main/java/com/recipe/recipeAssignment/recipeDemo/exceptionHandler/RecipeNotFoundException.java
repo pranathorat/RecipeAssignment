@@ -1,4 +1,4 @@
-package com.recipe.recipeAssignment.recipeDemo.ExceptionHandler;
+package com.recipe.recipeAssignment.recipeDemo.exceptionHandler;
 
 import com.recipe.recipeAssignment.recipeDemo.service.RecipeService;
 

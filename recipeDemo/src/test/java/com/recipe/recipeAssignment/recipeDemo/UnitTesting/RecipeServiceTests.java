@@ -1,7 +1,7 @@
-package com.recipe.recipeAssignment.recipeDemo.serviceTest;
+package com.recipe.recipeAssignment.recipeDemo.UnitTesting;
 
-import com.recipe.recipeAssignment.recipeDemo.ExceptionHandler.RecipeException;
-import com.recipe.recipeAssignment.recipeDemo.ExceptionHandler.RecipeIdNotExistException;
+import com.recipe.recipeAssignment.recipeDemo.exceptionHandler.RecipeException;
+import com.recipe.recipeAssignment.recipeDemo.exceptionHandler.RecipeIdNotExistException;
 import com.recipe.recipeAssignment.recipeDemo.dto.RecipeDto;
 import com.recipe.recipeAssignment.recipeDemo.entity.RecipeDemo;
 import com.recipe.recipeAssignment.recipeDemo.repository.RecipeRepository;
