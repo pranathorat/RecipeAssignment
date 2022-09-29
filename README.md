@@ -12,12 +12,21 @@ available recipes based on one or more of the following criteria:
 For example, the API should be able to handle the following search requests: 
 
 • All vegetarian recipes 
+
 • Recipes that can serve 4 persons and have “potatoes” as an ingredient 
+
 • Recipes without “salmon” as an ingredient that has “oven” in the instructions
 
 # How to build and run:
+Build Spring Boot Project with Maven
 
-mvn clean install
+clone the project
+
+cd recipeDemo
+
+mvn install
+
+#Run Spring Boot app using Intellij
 
 Endpoint URL:
 http://localhost:8700
