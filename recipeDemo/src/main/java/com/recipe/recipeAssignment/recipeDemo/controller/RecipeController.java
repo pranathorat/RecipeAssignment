@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -182,34 +183,11 @@ public class RecipeController {
     public ResponseEntity<List<RecipeDemo>>getByServeCapacity(@PathVariable Integer serveCapacity)throws Exception{
         return new ResponseEntity<List<RecipeDemo>>(recipeService.getByServeCapacity(serveCapacity),HttpStatus.OK);
     }
-
-    /**
-     * Fetches Recipe by serve count and ingredient present
-     * @param serveCapacity {@link Integer}
-     * @param ingredients {@link String}
-     * @return {@link ResponseEntity} with {@link List}of {@link RecipeDemo}
-     * @throws RecipeNotFoundException
-     */
-    @GetMapping(value = "/searchByServeCapacity/{serveCapacity}/searchByIncludeIngredients/{ingredients}")
-    public ResponseEntity<List<RecipeDemo>> findAllRecipeByServingCapacityAndIngredient(@PathVariable Integer serveCapacity, @PathVariable String ingredients) throws RecipeNotFoundException {
-
-        return ResponseEntity.ok(recipeService.findAllRecipeByServingCapacityAndIngredient(serveCapacity, ingredients));
+    @GetMapping("/recipe/search/{serveCapacity}/{ingredients}")
+    public ResponseEntity <List<RecipeDemo>> findRecipe (@PathVariable("serveCapacity") Integer serveCapacity,@PathVariable("ingredients") String ingredients) throws Exception{
+      List<RecipeDemo> recipeDemoList = recipeService.findRecipe(serveCapacity,ingredients);
+        log.info("{}",recipeDemoList);
+        return ResponseEntity.ok(recipeDemoList);
     }
-
-    /**
-     * fetch Recipe by instructions and include or exclude ingredient
-     * @param includeIngredient {@link boolean}
-     * @param ingredients {@link Integer}
-     * @param includeInstructions {@link boolean}
-     * @param instructions {@link String}
-     * @return {@link ResponseEntity} with {@link List}of {@link RecipeDemo}
-     * @throws RecipeNotFoundException
-     */
-    @GetMapping(path = "/searchByInstructionsAndIngredient")
-    public ResponseEntity<List<RecipeDemo>> findAllRecipeByIngredientAndInstruction(@RequestParam(defaultValue = "true") boolean includeIngredient,
-                                                                                       @RequestParam String ingredients, @RequestParam(defaultValue = "true") boolean includeInstructions, @RequestParam String instructions) throws RecipeNotFoundException {
-
-        return ResponseEntity.ok(recipeService.findAllRecipeByIngredientAndInstruction(includeIngredient, ingredients, includeInstructions, instructions));
-    }
-  }
+}
 

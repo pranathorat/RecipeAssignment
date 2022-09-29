@@ -7,8 +7,8 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
-@Builder
-@AllArgsConstructor
+
+
 @NoArgsConstructor
 @Getter
 @Setter
@@ -25,6 +25,17 @@ public class RecipeDto {
     Integer serveCapacity;
     String ingredients;
     String instructions;
+
+
+    public RecipeDto(Integer recipeId, String recipeName, String category, Integer serveCapacity, String ingredients, String instructions) {
+       super();
+        this.recipeId = recipeId;
+        this.recipeName = recipeName;
+        this.category = category;
+        this.serveCapacity = serveCapacity;
+        this.ingredients = ingredients;
+        this.instructions = instructions;
+    }
 
     /**
      *  Converts Entity into DTO
