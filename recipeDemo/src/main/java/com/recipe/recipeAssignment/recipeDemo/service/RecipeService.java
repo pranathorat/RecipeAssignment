@@ -5,13 +5,10 @@ import com.recipe.recipeAssignment.recipeDemo.exceptionHandler.RecipeIdNotExistE
 import com.recipe.recipeAssignment.recipeDemo.exceptionHandler.RecipeNotFoundException;
 import com.recipe.recipeAssignment.recipeDemo.dto.RecipeDto;
 import com.recipe.recipeAssignment.recipeDemo.entity.RecipeDemo;
-
 import java.util.List;
-
 /**
  * Service Interface
  */
-
 public interface RecipeService {
 
     public List<RecipeDto> getAllRecipes() throws RecipeException;
@@ -22,5 +19,5 @@ public interface RecipeService {
     List<RecipeDemo> getByCategory(String category);
     List<RecipeDemo>getByServeCapacity(Integer serveCapacity);
     List<RecipeDemo> findRecipe(Integer serveCapacity,String ingredients) throws RecipeNotFoundException;
-  //  List<RecipeDemo> findRecipeByInstructionIngredient(String ingredients,String instructions)throws RecipeNotFoundException;
+    List<RecipeDemo> findRecipeByInstructionIngredient(String ingredients,String instructions) throws RecipeNotFoundException, RecipeException;
 }

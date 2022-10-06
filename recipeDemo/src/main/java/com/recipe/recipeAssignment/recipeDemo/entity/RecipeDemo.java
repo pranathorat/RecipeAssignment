@@ -1,13 +1,12 @@
 package com.recipe.recipeAssignment.recipeDemo.entity;
 
 import javax.persistence.*;
-
 import lombok.*;
 
 /**
  * RecipeDemo Entity : stores the recipes
  */
-@Builder
+
 @Getter
 @Setter
 @AllArgsConstructor

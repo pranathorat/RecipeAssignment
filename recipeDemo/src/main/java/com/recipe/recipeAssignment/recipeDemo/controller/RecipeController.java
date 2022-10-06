@@ -1,5 +1,6 @@
 package com.recipe.recipeAssignment.recipeDemo.controller;
 
+
 import com.recipe.recipeAssignment.recipeDemo.exceptionHandler.RecipeIdNotExistException;
 import com.recipe.recipeAssignment.recipeDemo.exceptionHandler.RecipeNotFoundException;
 import com.recipe.recipeAssignment.recipeDemo.dto.RecipeDto;
@@ -11,7 +12,6 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -183,11 +183,33 @@ public class RecipeController {
     public ResponseEntity<List<RecipeDemo>>getByServeCapacity(@PathVariable Integer serveCapacity)throws Exception{
         return new ResponseEntity<List<RecipeDemo>>(recipeService.getByServeCapacity(serveCapacity),HttpStatus.OK);
     }
+
+    @Operation(summary="Get Recipes", description="Get Recipe by Serving capacity and ingredient", tags ="Get")
+    @ApiResponses(value ={
+            @ApiResponse(responseCode = "200",description = "Recipe found by serve Capacity",
+                    content={@Content(mediaType = "application/json",schema = @Schema(implementation = RecipeDto.class))}),
+            @ApiResponse(responseCode = "404",description = "Recipe not available as Per Serve Count and ingredient",content = @Content)
+    })
     @GetMapping("/recipe/search/{serveCapacity}/{ingredients}")
     public ResponseEntity <List<RecipeDemo>> findRecipe (@PathVariable("serveCapacity") Integer serveCapacity,@PathVariable("ingredients") String ingredients) throws Exception{
       List<RecipeDemo> recipeDemoList = recipeService.findRecipe(serveCapacity,ingredients);
         log.info("{}",recipeDemoList);
         return ResponseEntity.ok(recipeDemoList);
     }
+
+    @Operation(summary="Get Recipes", description="Get Recipe by include/exclude ingredient and instruction", tags ="Get")
+    @ApiResponses(value ={
+            @ApiResponse(responseCode = "200",description = "Recipe found by include/exclude ingredient and instruction",
+                    content={@Content(mediaType = "application/json",schema = @Schema(implementation = RecipeDto.class))}),
+            @ApiResponse(responseCode = "404",description = "Recipe not available as Per include/exclude ingredient and instruction",content = @Content)
+    })
+
+    @GetMapping("/searchRecipe/{ingredients}/{instructions}")
+    public ResponseEntity <List<RecipeDemo>> findRecipeByInstructionIngredient (@PathVariable("ingredients") String ingredients,@PathVariable("instructions") String instructions) throws Exception{
+        List<RecipeDemo> recipeDemoList = recipeService.findRecipeByInstructionIngredient(ingredients,instructions);
+        log.info("{}",recipeDemoList);
+        return ResponseEntity.ok(recipeDemoList);
+    }
+
 }
 

@@ -9,15 +9,11 @@ import com.recipe.recipeAssignment.recipeDemo.repository.RecipeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
+
 
 /**
  * Service layer Implementation
@@ -141,18 +137,55 @@ public class RecipeServiceImpl implements RecipeService {
         return recipeDemoList;
     }
 
+    /**
+     * It will return recipes by serve capacity and ingredients
+     * @param serveCapacity
+     * @param ingredients
+     * @return
+     * @throws RecipeNotFoundException
+     */
+
     public List<RecipeDemo> findRecipe(Integer serveCapacity,String ingredients) throws RecipeNotFoundException {
 
         List<RecipeDemo> recipeDemoListSearch = recipeRepository.findAll();
         List<RecipeDemo> recipeDemos = new ArrayList<>();
-        for(RecipeDemo recipeDemo:recipeDemoListSearch){
-
-            if (recipeDemo.getServeCapacity()== serveCapacity && recipeDemo.getIngredients().contains(recipeDemo.getIngredients())) {
-                recipeDemos.add(recipeDemo);
+        if (!recipeDemoListSearch.isEmpty()) {
+            for (RecipeDemo rd : recipeDemoListSearch) {
+                    if (rd.getServeCapacity().equals(serveCapacity) && rd.getIngredients().contains(ingredients)) {
+                        recipeDemos.add(rd);
+                    }
             }
+            return recipeDemos;
 
+        }else  {
+            throw new RecipeNotFoundException("Recipe not found");
         }
-        return recipeDemos;
     }
 
+    /**
+     * It will return recipes by include or exclude ingredients
+     * @param ingredients
+     * @param instructions
+     * @return
+     * @throws RecipeNotFoundException
+     * @throws RecipeException
+     */
+    public List<RecipeDemo>findRecipeByInstructionIngredient(String ingredients,String instructions) throws RecipeNotFoundException, RecipeException {
+        List<RecipeDemo> recipeDemoListSearch = recipeRepository.findAll();
+        List<RecipeDemo> recipeDemos = new ArrayList<>();
+        if (!recipeDemoListSearch.isEmpty()) {
+            for (RecipeDemo rd : recipeDemoListSearch) {
+            if (rd.getIngredients() != null && rd.getInstructions()!=null) {
+                if (rd.getIngredients().contains(ingredients) || rd.getInstructions().contains(instructions)) {
+                    recipeDemos.add(rd);
+                } else if (!rd.getIngredients().contains(ingredients) || !rd.getInstructions().contains(instructions))
+
+                   System.out.println(rd);
+
+            }}
+            return recipeDemos;
+        }
+        throw new RecipeNotFoundException("Recipe not found");
+    }
 }
+

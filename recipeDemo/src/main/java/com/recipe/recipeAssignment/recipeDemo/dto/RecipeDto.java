@@ -2,12 +2,9 @@ package com.recipe.recipeAssignment.recipeDemo.dto;
 
 import com.recipe.recipeAssignment.recipeDemo.entity.RecipeDemo;
 import lombok.*;
-
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-
-
 
 @NoArgsConstructor
 @Getter
@@ -25,7 +22,6 @@ public class RecipeDto {
     Integer serveCapacity;
     String ingredients;
     String instructions;
-
 
     public RecipeDto(Integer recipeId, String recipeName, String category, Integer serveCapacity, String ingredients, String instructions) {
        super();
