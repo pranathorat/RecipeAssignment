@@ -1,5 +1,6 @@
 package com.recipe.recipeAssignment.recipeDemo.service;
 
+import com.recipe.recipeAssignment.recipeDemo.dto.RecipeSearchDto;
 import com.recipe.recipeAssignment.recipeDemo.exceptionHandler.RecipeException;
 import com.recipe.recipeAssignment.recipeDemo.exceptionHandler.RecipeIdNotExistException;
 import com.recipe.recipeAssignment.recipeDemo.exceptionHandler.RecipeNotFoundException;
@@ -139,53 +140,44 @@ public class RecipeServiceImpl implements RecipeService {
 
     /**
      * It will return recipes by serve capacity and ingredients
-     * @param serveCapacity
-     * @param ingredients
+     *
      * @return
      * @throws RecipeNotFoundException
      */
-
-    public List<RecipeDemo> findRecipe(Integer serveCapacity,String ingredients) throws RecipeNotFoundException {
-
-        List<RecipeDemo> recipeDemoListSearch = recipeRepository.findAll();
-        List<RecipeDemo> recipeDemos = new ArrayList<>();
-        if (!recipeDemoListSearch.isEmpty()) {
-            for (RecipeDemo rd : recipeDemoListSearch) {
-                    if (rd.getServeCapacity().equals(serveCapacity) && rd.getIngredients().contains(ingredients)) {
-                        recipeDemos.add(rd);
-                    }
+    public List<RecipeDemo> findRecipe(RecipeSearchDto recipeSearchDto) throws RecipeNotFoundException {
+        List<RecipeDemo> recipeDtoArrayList = new ArrayList<>();
+        List<RecipeDemo> recipeDemoList = recipeRepository.findAll();
+        recipeDemoList.forEach(recipeDemo -> {
+            if (recipeSearchDto.getServeCapacity() != null ) {
+                if (recipeSearchDto.getServeCapacity().equals(recipeDemo.getServeCapacity())){
+                    recipeDtoArrayList.add(recipeDemo);
+                }}
+            if(recipeSearchDto.getCategory()!=null){
+                if(recipeSearchDto.getCategory().equals(recipeDemo.getCategory())){
+                    recipeDtoArrayList.add(recipeDemo);
+                }
             }
-            return recipeDemos;
+            if(recipeDemo.getIngredients()!=null && recipeDemo.getInstructions()!=null){
+                if(recipeSearchDto.isIncludeIngredients()){
+                    if(recipeDemo.getIngredients().contains(recipeSearchDto.getIngredients())){
+                        recipeDtoArrayList.add(recipeDemo);
+                    }
+                }
+                else if(recipeSearchDto.isIncludeInstructions()){
+                    if(recipeDemo.getInstructions().contains(recipeSearchDto.getInstructions())){
+                        recipeDtoArrayList.add(recipeDemo);
+                    }
+                }
+            }
 
-        }else  {
-            throw new RecipeNotFoundException("Recipe not found");
-        }
-    }
+        });
+        if (recipeDtoArrayList.isEmpty())
+            throw new RecipeNotFoundException("Not available");
+        return recipeDtoArrayList;
 
-    /**
-     * It will return recipes by include or exclude ingredients
-     * @param ingredients
-     * @param instructions
-     * @return
-     * @throws RecipeNotFoundException
-     * @throws RecipeException
-     */
-    public List<RecipeDemo>findRecipeByInstructionIngredient(String ingredients,String instructions) throws RecipeNotFoundException, RecipeException {
-        List<RecipeDemo> recipeDemoListSearch = recipeRepository.findAll();
-        List<RecipeDemo> recipeDemos = new ArrayList<>();
-        if (!recipeDemoListSearch.isEmpty()) {
-            for (RecipeDemo rd : recipeDemoListSearch) {
-            if (rd.getIngredients() != null && rd.getInstructions()!=null) {
-                if (rd.getIngredients().contains(ingredients) || rd.getInstructions().contains(instructions)) {
-                    recipeDemos.add(rd);
-                } else if (!rd.getIngredients().contains(ingredients) || !rd.getInstructions().contains(instructions))
-
-                   System.out.println(rd);
-
-            }}
-            return recipeDemos;
-        }
-        throw new RecipeNotFoundException("Recipe not found");
     }
 }
+
+
+
 

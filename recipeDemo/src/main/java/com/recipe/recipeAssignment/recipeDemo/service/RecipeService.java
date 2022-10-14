@@ -1,5 +1,6 @@
 package com.recipe.recipeAssignment.recipeDemo.service;
 
+import com.recipe.recipeAssignment.recipeDemo.dto.RecipeSearchDto;
 import com.recipe.recipeAssignment.recipeDemo.exceptionHandler.RecipeException;
 import com.recipe.recipeAssignment.recipeDemo.exceptionHandler.RecipeIdNotExistException;
 import com.recipe.recipeAssignment.recipeDemo.exceptionHandler.RecipeNotFoundException;
@@ -18,6 +19,7 @@ public interface RecipeService {
     public RecipeDemo updateRecipe(RecipeDto recipeDTO) throws RecipeException;
     List<RecipeDemo> getByCategory(String category);
     List<RecipeDemo>getByServeCapacity(Integer serveCapacity);
-    List<RecipeDemo> findRecipe(Integer serveCapacity,String ingredients) throws RecipeNotFoundException;
-    List<RecipeDemo> findRecipeByInstructionIngredient(String ingredients,String instructions) throws RecipeNotFoundException, RecipeException;
+   // List<RecipeDemo> findRecipe(Integer serveCapacity,String ingredients) throws RecipeNotFoundException;
+   List<RecipeDemo> findRecipe(RecipeSearchDto recipeSearchDto) throws RecipeNotFoundException;
+ //   List<RecipeDemo> findRecipeByInstructionIngredient(String ingredients,String instructions) throws RecipeNotFoundException, RecipeException;
 }
